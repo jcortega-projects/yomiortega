@@ -50,6 +50,7 @@ collections:
             widget: "object"
             fields:
               - { label: "Etiqueta pequeña", name: "eyebrow", widget: "string" }
+              - { label: "Foto de perfil", name: "foto", widget: "image", hint: "Tu foto principal. Arrastra una imagen o elige una ya subida." }
               - { label: "Nombre", name: "nombre", widget: "string" }
               - { label: "Párrafos", name: "parrafos", widget: "list", field: { label: "Párrafo", name: "parrafo", widget: "text" } }
               - label: "Datos / credenciales"
