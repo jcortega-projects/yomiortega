@@ -1,0 +1,16 @@
+{
+  "name": "yomiortega-web",
+  "version": "1.0.0",
+  "description": "Sitio web de Yomi Ortega · China Strategy for Latin America",
+  "scripts": {
+    "start": "eleventy --serve --port=8099",
+    "build": "eleventy",
+    "mapa": "node scripts/generar-mapa.js"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "d3-geo": "^3.1.0",
+    "topojson-client": "^3.1.0",
+    "world-atlas": "^2.0.2"
+  }
+}

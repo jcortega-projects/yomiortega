@@ -1,0 +1,141 @@
+# ============================================================
+#  Configuración del panel de administración (Decap CMS)
+#  Define lo que Yomi ve y puede editar en yomiortega.com/admin
+# ============================================================
+
+backend:
+  name: git-gateway
+  branch: main
+
+# Carpeta donde se guardan las fotos que Yomi sube
+media_folder: "src/assets/uploads"
+public_folder: "/assets/uploads"
+
+# Idioma del panel
+locale: "es"
+
+collections:
+  # ---- TEXTOS DEL HOME (página de inicio) ----
+  - name: "paginas"
+    label: "Textos de la página"
+    files:
+      - name: "home"
+        label: "Página de inicio (Home)"
+        file: "src/_data/home.json"
+        description: "Edita los textos de la portada. El diseño no se toca. Truco: pon *asteriscos* alrededor de una palabra para que salga en dorado."
+        fields:
+          - label: "1 · Portada (Hero)"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Etiqueta pequeña de arriba", name: "eyebrow", widget: "string" }
+              - { label: "Titular grande", name: "titulo", widget: "text", hint: "Usa *asteriscos* para dorado. Presiona Enter para pasar a la segunda línea." }
+              - { label: "Frase de apoyo", name: "lead", widget: "text" }
+              - { label: "Botón principal (texto)", name: "cta_primario", widget: "string" }
+              - { label: "Botón secundario (texto)", name: "cta_secundario", widget: "string" }
+              - { label: "Nota de abajo", name: "nota", widget: "text", hint: "Usa *asteriscos* para dorado." }
+          - label: "2 · El problema"
+            name: "problema"
+            widget: "object"
+            fields:
+              - { label: "Etiqueta pequeña", name: "eyebrow", widget: "string" }
+              - { label: "Titular", name: "titulo", widget: "text" }
+              - { label: "Párrafo", name: "parrafo", widget: "text", hint: "Usa *asteriscos* para dorado." }
+              - { label: "“Para ti si…” — título", name: "para_ti_titulo", widget: "string" }
+              - { label: "“Para ti si…” — texto", name: "para_ti_texto", widget: "text" }
+              - { label: "“No es para ti si…” — título", name: "no_para_ti_titulo", widget: "string" }
+              - { label: "“No es para ti si…” — texto", name: "no_para_ti_texto", widget: "text" }
+          - label: "3 · Sobre mí"
+            name: "sobre_mi"
+            widget: "object"
+            fields:
+              - { label: "Etiqueta pequeña", name: "eyebrow", widget: "string" }
+              - { label: "Nombre", name: "nombre", widget: "string" }
+              - { label: "Párrafos", name: "parrafos", widget: "list", field: { label: "Párrafo", name: "parrafo", widget: "text" } }
+              - label: "Datos / credenciales"
+                name: "datos"
+                widget: "list"
+                fields:
+                  - { label: "Carácter chino", name: "hanzi", widget: "string", hint: "Un carácter decorativo. Si no sabes cuál, deja el que está." }
+                  - { label: "Texto del dato", name: "texto", widget: "string" }
+          - label: "4 · Temas (5 bloques)"
+            name: "temas"
+            widget: "object"
+            fields:
+              - { label: "Etiqueta pequeña", name: "eyebrow", widget: "string" }
+              - { label: "Titular", name: "titulo", widget: "string" }
+              - label: "Bloques"
+                name: "bloques"
+                widget: "list"
+                fields:
+                  - { label: "Número (I, II, III…)", name: "numero", widget: "string" }
+                  - { label: "Título del bloque", name: "titulo", widget: "string" }
+                  - { label: "Lista de temas", name: "temas", widget: "list", field: { label: "Tema", name: "tema", widget: "string" } }
+                  - { label: "Caracteres chinos", name: "hanzi", widget: "string" }
+          - label: "5 · Encabezado del Blog"
+            name: "blog"
+            widget: "object"
+            fields:
+              - { label: "Etiqueta pequeña", name: "eyebrow", widget: "string" }
+              - { label: "Titular", name: "titulo", widget: "string" }
+          - label: "6 · Servicios"
+            name: "servicios"
+            widget: "object"
+            fields:
+              - { label: "Etiqueta pequeña", name: "eyebrow", widget: "string" }
+              - { label: "Titular", name: "titulo", widget: "string" }
+              - label: "Niveles de servicio"
+                name: "tiers"
+                widget: "list"
+                fields:
+                  - { label: "Paso (ej. Primer paso)", name: "paso", widget: "string" }
+                  - { label: "Título", name: "titulo", widget: "string" }
+                  - { label: "Descripción", name: "descripcion", widget: "text" }
+                  - { label: "Texto del enlace", name: "cta", widget: "string" }
+          - label: "7 · Guía gratuita"
+            name: "magnet"
+            widget: "object"
+            fields:
+              - { label: "Etiqueta pequeña", name: "eyebrow", widget: "string" }
+              - { label: "Titular", name: "titulo", widget: "string" }
+              - { label: "Párrafo", name: "parrafo", widget: "text" }
+              - { label: "Botón (texto)", name: "boton", widget: "string" }
+          - label: "8 · Contacto"
+            name: "contacto"
+            widget: "object"
+            fields:
+              - { label: "Etiqueta pequeña", name: "eyebrow", widget: "string" }
+              - { label: "Titular", name: "titulo", widget: "string" }
+              - { label: "Párrafo", name: "parrafo", widget: "text" }
+              - { label: "Botón (texto)", name: "boton", widget: "string" }
+
+  - name: "blog"
+    label: "Artículos del blog"
+    label_singular: "Artículo"
+    folder: "src/content/blog"
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}}"
+    sortable_fields: ["fecha", "title"]
+    fields:
+      - { name: "title", label: "Título del artículo", widget: "string", hint: "El título grande que se ve arriba." }
+      - {
+          name: "categoria",
+          label: "Categoría",
+          widget: "select",
+          hint: "Elige a qué bloque pertenece.",
+          options:
+            [
+              "Bloque I · Mentalidad",
+              "Bloque II · Sistema cultural",
+              "Bloque III · Práctica",
+              "Bloque IV · Negociar y cerrar",
+              "Bloque V · Conocer China",
+            ],
+          default: "Bloque I · Mentalidad",
+        }
+      - { name: "resumen", label: "Resumen corto", widget: "text", hint: "1–2 frases que aparecen en la tarjeta del blog, antes de entrar al artículo." }
+      - { name: "fecha", label: "Fecha", widget: "datetime", date_format: "DD-MM-YYYY", time_format: false, format: "YYYY-MM-DD" }
+      - { name: "imagen", label: "Foto de portada (opcional)", widget: "image", required: false, hint: "Arrastra una imagen o elige una ya subida. Puedes dejarlo vacío." }
+      - { name: "video", label: "Video de YouTube (opcional)", widget: "string", required: false, hint: "Pega aquí el enlace de YouTube. Ejemplo: https://youtu.be/abc123. Déjalo vacío si no hay video." }
+      - { name: "body", label: "Contenido del artículo", widget: "markdown", hint: "Escribe aquí como en Word: negritas, listas, subtítulos e imágenes." }

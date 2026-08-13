@@ -1,0 +1,70 @@
+{
+  "hero": {
+    "eyebrow": "China Strategy for Latin America",
+    "titulo": "Tu empresa ya trabaja con China.\nTus equipos, *todavía no*.",
+    "lead": "Formo a equipos latinoamericanos para cerrar la brecha cultural que frena los negocios con China.",
+    "cta_primario": "Agenda una consulta",
+    "cta_secundario": "Ver los temas",
+    "nota": "Para empresas que *ya operan con China* — no para quienes recién empiezan."
+  },
+  "problema": {
+    "eyebrow": "El problema",
+    "titulo": "Ya tienen los contactos. Ya tienen los contratos. Y aun así, cada reunión con China se siente como empezar de cero.",
+    "parrafo": "El obstáculo no es logístico ni de idioma. Es cultural: un *“sí”* que no era un sí, un silencio que se leyó mal, una cena que decidió el trato antes de firmar nada.",
+    "para_ti_titulo": "Para ti si…",
+    "para_ti_texto": "Tu empresa ya trabaja con China y tus equipos ecuatorianos o latinoamericanos chocan con la contraparte.",
+    "no_para_ti_titulo": "No es para ti si…",
+    "no_para_ti_texto": "Buscas dar tus primeros pasos para exportar o encontrar proveedores en China desde cero."
+  },
+  "sobre_mi": {
+    "eyebrow": "Sobre mí",
+    "nombre": "Yomi Ortega",
+    "parrafos": [
+      "Internacionalista ecuatoriana especializada en la cultura de negocios con China. Coordino el Instituto Confucio y el programa de visitantes internacionales de la Universidad San Francisco de Quito, en la frontera diaria entre lo latinoamericano y lo chino.",
+      "Estudié chino en la Universidad de Sichuan con beca del gobierno chino, y negocios y relaciones con China en la PUC de Chile. No hablo de China desde los titulares: la vivo, la trabajo y la traduzco para que tu empresa la entienda."
+    ],
+    "datos": [
+      { "hanzi": "语", "texto": "Trilingüe: español · inglés · chino (HSK3)" },
+      { "hanzi": "学", "texto": "Chino en la Universidad de Sichuan — beca CSC del gobierno chino" },
+      { "hanzi": "务", "texto": "Coordinadora · Instituto Confucio, USFQ" },
+      { "hanzi": "究", "texto": "China: negocios, tecnología y RR.II. — PUC Chile" },
+      { "hanzi": "誉", "texto": "Lic. en Relaciones Internacionales, Cum Laude (USFQ)" }
+    ]
+  },
+  "temas": {
+    "eyebrow": "Temas",
+    "titulo": "Cinco bloques para entender a China de verdad",
+    "bloques": [
+      { "numero": "I", "titulo": "El cambio de mentalidad", "temas": ["Guanxi", "Mianzi", "El “sí” que no es sí", "La cena es parte del trato"], "hanzi": "关系" },
+      { "numero": "II", "titulo": "El sistema operativo cultural", "temas": ["Renqing", "Confucio y jerarquía", "Nunca decide una sola persona", "China juega a diez años", "El intermediario"], "hanzi": "人情" },
+      { "numero": "III", "titulo": "La práctica diaria", "temas": ["WeChat lo es todo", "La tarjeta con dos manos", "El regalo correcto", "El 8, el 4 y el rojo", "Sobrevivir el ganbei"], "hanzi": "干杯" },
+      { "numero": "IV", "titulo": "Negociar y cerrar", "temas": ["Cómo negocia China", "El contrato es el principio, no el final"], "hanzi": "谈判" },
+      { "numero": "V", "titulo": "Conocer China de verdad", "temas": ["China ya no copia, inventa", "China no es un solo país", "China ya está en tu país"], "hanzi": "中国" }
+    ]
+  },
+  "blog": {
+    "eyebrow": "Blog",
+    "titulo": "Lo que Google indexa, lo que tu equipo necesita"
+  },
+  "servicios": {
+    "eyebrow": "Cómo trabajamos",
+    "titulo": "Del taller puntual al acompañamiento estratégico",
+    "tiers": [
+      { "paso": "Primer paso", "titulo": "Talleres y charlas", "descripcion": "Sesiones en español para tus equipos: entender la cultura china de negocios y dejar de perder tratos por malentendidos culturales.", "cta": "Consultar disponibilidad →" },
+      { "paso": "Segundo paso", "titulo": "Consultoría puntual", "descripcion": "Preparación para una negociación, visita o alianza específica con una contraparte china. Diagnóstico y guía a la medida.", "cta": "Conversemos →" },
+      { "paso": "Compromiso mayor", "titulo": "Acompañamiento estratégico", "descripcion": "Trabajo continuo junto a tu empresa para instalar una cultura interna capaz de operar con China a largo plazo.", "cta": "Solicitar propuesta →" }
+    ]
+  },
+  "magnet": {
+    "eyebrow": "Guía gratuita",
+    "titulo": "5 errores al negociar con China",
+    "parrafo": "Los cinco tropiezos culturales que le cuestan tratos a las empresas latinoamericanas — y cómo evitarlos. Directo a tu correo.",
+    "boton": "Recibir la guía"
+  },
+  "contacto": {
+    "eyebrow": "Contacto",
+    "titulo": "¿Tu equipo trabaja con China?",
+    "parrafo": "Agenda una consulta inicial gratuita. Te muestro cómo trabajo y vemos si puedo ayudar a tu empresa.",
+    "boton": "Agenda una consulta"
+  }
+}

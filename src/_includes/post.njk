@@ -1,0 +1,39 @@
+---
+layout: base.njk
+---
+<article class="section">
+  <div class="wrap" style="max-width:720px;">
+    <p class="eyebrow">{{ categoria }}</p>
+    <h1 style="font-size:clamp(2rem,5vw,3.2rem);margin-block:1rem 1rem;">{{ title }}</h1>
+    <p style="color:var(--text-dim);margin-bottom:2.5rem;">
+      {% if fecha %}{{ fecha | fechaEs }}{% endif %}
+    </p>
+
+    {% if imagen %}
+    <img src="{{ imagen }}" alt="{{ title }}" style="width:100%;border-radius:var(--radius);border:1px solid var(--line);margin-bottom:2.5rem;">
+    {% endif %}
+
+    {% if video %}
+    <div style="position:relative;padding-top:56.25%;margin-bottom:2.5rem;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);">
+      <iframe src="{{ video | youtubeEmbed }}" title="{{ title }}" style="position:absolute;inset:0;width:100%;height:100%;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    {% endif %}
+
+    <div class="post-body" style="font-size:1.08rem;line-height:1.8;color:var(--text-dim);">
+      {{ content | safe }}
+    </div>
+
+    <p style="margin-top:3rem;"><a class="btn btn--ghost" href="/blog/">← Volver al blog</a></p>
+  </div>
+</article>
+
+<style>
+  .post-body h2{font-family:var(--display);color:var(--text);font-size:1.7rem;margin-block:2rem 1rem;}
+  .post-body h3{font-family:var(--display);color:var(--text);font-size:1.35rem;margin-block:1.6rem .8rem;}
+  .post-body p{margin-bottom:1.2rem;}
+  .post-body a{color:var(--gold-solid);text-decoration:underline;}
+  .post-body ul,.post-body ol{margin:0 0 1.2rem 1.4rem;}
+  .post-body li{margin-bottom:.5rem;}
+  .post-body img{max-width:100%;border-radius:var(--radius);margin-block:1.5rem;}
+  .post-body blockquote{border-left:2px solid var(--gold-solid);padding-left:1.2rem;margin:1.5rem 0;font-style:italic;color:var(--text);}
+</style>

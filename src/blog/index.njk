@@ -1,0 +1,23 @@
+---
+layout: base.njk
+title: "Blog · Yomi Ortega"
+description: "Artículos sobre cultura de negocios con China para equipos latinoamericanos."
+---
+<section class="section">
+  <div class="wrap">
+    <div class="section__head">
+      <p class="eyebrow">Blog</p>
+      <h2>Lo que Google indexa, lo que tu equipo necesita</h2>
+    </div>
+    <div class="posts">
+      {%- for post in collections.blog | reverse -%}
+      <article class="post">
+        <span class="post__cat">{{ post.data.categoria }}</span>
+        <h3>{{ post.data.title }}</h3>
+        <p>{{ post.data.resumen }}</p>
+        <a class="post__more" href="{{ post.url }}">Leer artículo →</a>
+      </article>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
