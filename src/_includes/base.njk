@@ -13,6 +13,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="/css/styles.css">
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 
 <body>
@@ -61,6 +62,7 @@ document.getElementById('themeToggle').addEventListener('click',()=>{root.datase
 const burger=document.getElementById('burger'),menu=document.getElementById('menu');
 burger.addEventListener('click',()=>{menu.dataset.open=menu.dataset.open==='true'?'false':'true';});
 menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.dataset.open='false'));
+if(window.netlifyIdentity){window.netlifyIdentity.on('init',u=>{if(!u){window.netlifyIdentity.on('login',()=>{document.location.href='/admin/';})}});}
 </script>
 </body>
 </html>
