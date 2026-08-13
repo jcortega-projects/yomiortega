@@ -13,7 +13,7 @@ description: "Formo a equipos latinoamericanos para cerrar la brecha cultural qu
     <h1>{{ home.hero.titulo | rico | safe }}</h1>
     <p class="hero__lead">{{ home.hero.lead }}</p>
     <div class="hero__cta">
-      <a href="#contacto" class="btn btn--solid">{{ home.hero.cta_primario }}</a>
+      <a href="mailto:{{ site.email }}?subject=Consulta%20inicial" class="btn btn--solid">{{ home.hero.cta_primario }}</a>
       <a href="#temas" class="btn btn--ghost">{{ home.hero.cta_secundario }}</a>
     </div>
     <p class="hero__for">{{ home.hero.nota | rico | safe }}</p>
@@ -115,7 +115,7 @@ description: "Formo a equipos latinoamericanos para cerrar la brecha cultural qu
       <p class="eyebrow">{{ home.contacto.eyebrow }}</p>
       <h2>{{ home.contacto.titulo }}</h2>
       <p>{{ home.contacto.parrafo }}</p>
-      <a href="#" class="btn btn--solid">{{ home.contacto.boton }}</a>
+      <a href="mailto:{{ site.email }}?subject=Consulta%20inicial" class="btn btn--solid">{{ home.contacto.boton }}</a>
     </div>
     <div class="contact__links">
       <a href="mailto:{{ site.email }}"><svg class="ic" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>{{ site.email }}</a>
